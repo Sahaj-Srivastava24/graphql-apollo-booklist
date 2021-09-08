@@ -9,7 +9,7 @@ mongoose.connect("mongodb+srv://m001-student:m001-mongodb-basics@gql-testing.ffs
 mongoose.connection.once( "open", ()=> {
   console.log("Connected to MongoDB")
 })
-const PORT = 3000
+const PORT = 4000
 
 app.use("/graphql", graphqlHTTP({
   schema,
