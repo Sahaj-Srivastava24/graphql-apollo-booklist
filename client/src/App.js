@@ -1,4 +1,5 @@
 import Booklist from './components/Booklist';
+import AddBook from './components/Addbook';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
 
 
@@ -15,6 +16,7 @@ function App() {
       <ApolloProvider client={client}>
         <h1>Madlad's GraphQL BookShelf</h1>
         <Booklist />
+        <AddBook />
       </ApolloProvider>
     </div>
   );

@@ -1,15 +1,6 @@
 import React from 'react'
-import { gql, useQuery } from '@apollo/client'
-
-const getBooksQuery = gql`
-  {
-    books{
-      name
-      genre
-      id
-    }
-  }
-`
+import { useQuery } from '@apollo/client'
+import { getBooksQuery } from "../queries/queries"
 
 function Booklist() {
 
@@ -27,7 +18,6 @@ function Booklist() {
       })
     }
   }
-  // console.log(this.props)
   return (
     <div>
       <ul>
