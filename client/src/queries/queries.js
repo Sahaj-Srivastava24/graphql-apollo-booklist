@@ -4,8 +4,25 @@ const getBooksQuery = gql`
   {
     books{
       name
-      genre
       id
+    }
+  }
+`
+
+const getBookQuery = gql`
+  query($id:ID){
+    book(id: $id){
+      name
+      genre
+      author{
+        id
+        name
+        age
+        books{
+          name
+          id
+        }
+      }
     }
   }
 `
@@ -40,4 +57,4 @@ const setBookQuery = gql`
 
 // `
 
-export { getBooksQuery, getauthorsQuery, setBookQuery }
+export { getBooksQuery, getauthorsQuery, setBookQuery, getBookQuery }
